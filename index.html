@@ -183,6 +183,65 @@
         </div>
     </div>
 </section>
+<!-- SERVICE BOOKING SECTION -->
+<section id="booking-section" class="service-booking-section bg-[#0B132B] py-20 px-6 text-white">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-extrabold tracking-tight">Book Your Service</h2>
+            <p class="text-sm text-gray-400 mt-2 font-normal">Fill out the form below and we'll get back to you shortly</p>
+        </div>
+
+        <form class="bg-white text-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-semibold text-[#0B132B] mb-2">Full Name</label>
+                    <input type="text" placeholder="Your Name" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-sm">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-[#0B132B] mb-2">Email</label>
+                    <input type="email" placeholder="email@example.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-sm">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-semibold text-[#0B132B] mb-2">Phone Number</label>
+                    <input type="tel" placeholder="+1 (234) 567-8900" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-sm">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-[#0B132B] mb-2">Service Type</label>
+                    <div class="relative">
+                        <select class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-sm text-gray-500 appearance-none">
+                            <option>Select a service</option>
+                            <option>Emergency Towing</option>
+                            <option>Bodyworks & Painting</option>
+                            <option>Mechanical Repairs</option>
+                            <option>Wheel Alignment</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-[#0B132B] mb-2">Preferred Date</label>
+                <input type="date" class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-sm text-gray-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-[#0B132B] mb-2">Additional Details</label>
+                <textarea rows="4" placeholder="Tell us more about your vehicle and the service you need..." class="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-[#F97316] hover:bg-[#e2620d] text-white font-bold py-4 rounded-xl text-sm transition tracking-wider uppercase mt-4 shadow-md">
+                Submit Booking Request
+            </button>
+        </form>
+    </div>
+</section>
+
 
    <script>
         lucide.createIcons();
