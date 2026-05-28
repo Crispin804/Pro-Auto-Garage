@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Pro Auto Care Garage</title>
+</head>
+<body>
+    <!-- GLOBAL NAVIGATION BAR -->
+<nav class="global-navigation-bar bg-[#0B132B] text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo and Brand Alignment -->
+        <div class="flex items-center space-x-3">
+            <a href="#hero-section" class="flex items-center space-x-3 hover:opacity-90 transition" title="Go to Home">
+                <i data-lucide="wrench" class="w-8 h-8 text-[#F97316] transform rotate-90"></i>
+            </a>
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">Pro Auto Care</h1>
+                <p class="text-xs text-gray-400 font-normal">Your Trusted Garage Partner</p>
+            </div>
+        </div>
+        
+        <!-- External Navigation links requested for later development -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+            <a href="#hero-section" class="hover:text-[#F97316] transition text-gray-300">Home</a>
+            <a href="services.html" class="hover:text-[#F97316] transition text-gray-300">Services</a>
+            <a href="about.html" class="hover:text-[#F97316] transition text-gray-300">About Us</a>
+            <a href="gallery.html" class="hover:text-[#F97316] transition text-gray-300">Gallery</a>
+            <a href="contact.html" class="hover:text-[#F97316] transition text-gray-300">Contact</a>
+        </div>
+
+        <!-- Call to Action Emergency Component -->
+        <div>
+            <a href="tel:1234567890" class="bg-[#F97316] hover:bg-[#e2620d] transition text-white px-5 py-2.5 rounded-lg flex items-center space-x-2 font-bold text-sm tracking-wide">
+                <i data-lucide="phone" class="w-4 h-4 fill-current"></i>
+                <span>24/7 Emergency</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+   <script>
+        lucide.createIcons();
+    </script> 
+</body>
+</html>
