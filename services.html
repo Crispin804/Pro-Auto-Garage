@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Pro Auto Care</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#F8FAFC] text-gray-800 font-sans antialiased">
+
+    <!-- 1. GLOBAL NAVIGATION BAR -->
+    <nav class="global-navigation-bar bg-[#0B132B] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html#hero-section" class="flex items-center space-x-3 hover:opacity-90 transition">
+                    <i class="fa-solid fa-wrench text-2xl text-[#F97316]"></i>
+                </a>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tight">Pro Auto Care</h1>
+                    <p class="text-xs text-gray-400 font-normal">Your Trusted Garage Partner</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="index.html#hero-section" class="text-gray-300 hover:text-[#F97316] transition">Home</a>
+                <a href="Services.html" class="text-[#F97316] font-bold transition">Services</a>
+                <a href="About.html" class="text-gray-300 hover:text-[#F97316] transition">About Us</a>
+                <a href="Gallery.html" class="text-gray-300 hover:text-[#F97316] transition">Gallery</a>
+                <a href="Contact.html" class="text-gray-300 hover:text-[#F97316] transition">Contact</a>
+            </div>
+
+            <div>
+                <a href="tel:1234567890" class="bg-[#F97316] hover:bg-[#e2620d] transition text-white px-5 py-2.5 rounded-lg flex items-center space-x-2 font-bold text-sm tracking-wide">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>24/7 Emergency</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO PAGE HEADER -->
+    <header class="bg-[#0B132B] py-20 px-6 text-center text-white border-t border-slate-800">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight">Our Professional Capabilities</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+                Explore our master-certified mechanical programs. We offer highly affordable, competitive pricing across Kenya with a complimentary premium car wash included after every service.
+            </p>
+        </div>
+    </header>
+
+    <!-- SERVICES LIST -->
+    <main class="py-20 px-6 space-y-24 max-w-6xl mx-auto">
+
+        <!-- Service 1: Emergency Towing -->
+        <section class="flex flex-col lg:flex-row items-center gap-12 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+            <div class="w-full lg:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden shadow-inner">
+                <img src="Assets/Images/pro auto care.jpg" alt="Emergency Towing Truck Fleet" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div class="flex items-center space-x-3 text-[#F97316]">
+                    <i class="fa-solid fa-truck text-2xl"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Roadside Support Tow trucks</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-[#0B132B] tracking-tight">24/7 Emergency Towing</h2>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Stranded on the road or dealing with a sudden component breakdown? Our live dispatch units deploy instantly. We guarantee zero-damage recovery vehicle platform lifting for any vehicle from lightweight sedans to heavy utility trucks at budget-friendly local rates.
+                </p>
+                
+                <ul class="grid grid-cols-2 gap-3 text-xs text-gray-600 font-semibold">
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>30-Minute Rapid Arrival</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Flatbed Safety Strapping</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Long-Distance Transport</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Battery Jumpstarts & Fuel</li>
+                </ul>
+
+                <!-- FREE CAR WASH -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center space-x-3">
+                    <i class="fa-solid fa-soap text-[#3B82F6] text-lg animate-pulse"></i>
+                    <p class="text-xs text-blue-800 font-bold">Bonus: Includes full post-tow exterior chemical soap wash & internal vacuuming!</p>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between border-t border-gray-100">
+                    <span class="text-sm font-bold text-gray-400">Rates from: <span class="text-[#0B132B] text-lg font-black">KSh 4,500</span></span>
+                    <a href="index.html#booking-section" class="bg-[#0B132B] hover:bg-[#F97316] transition text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">Book Towing</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 2: Bodyworks & Painting -->
+        <section class="flex flex-col lg:flex-row-reverse items-center gap-12 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+            <div class="w-full lg:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden shadow-inner">
+                <img src="Assets/Images/spray booth.jpg" alt="Car Painting Spray booth" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div class="flex items-center space-x-3 text-[#3B82F6]">
+                    <i class="fa-solid fa-paint-roller text-2xl"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Cosmetic spray booth</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-[#0B132B] tracking-tight">Bodyworks & Painting</h2>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Restore your vehicle to showroom condition with highly competitive pricing per panel. We handle advanced scratch correction, frame dent pulling using premium pneumatic tools, and custom color-match paint layering inside modern enclosed climate-controlled booths.
+                </p>
+                
+                <ul class="grid grid-cols-2 gap-3 text-xs text-gray-600 font-semibold">
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>OEM Color Match Code</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Dent & Scratch Removal</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Clear Coat Protectors</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Insurance Approved Care</li>
+                </ul>
+
+                <!-- FREE CAR WASH -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center space-x-3">
+                    <i class="fa-solid fa-soap text-[#3B82F6] text-lg"></i>
+                    <p class="text-xs text-blue-800 font-bold">Bonus: Includes showroom detailing hand wash & wheel dressing coat free!</p>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between border-t border-gray-100">
+                    <span class="text-sm font-bold text-gray-400">Panels from: <span class="text-[#0B132B] text-lg font-black">KSh 6,000 / panel</span></span>
+                    <a href="index.html#booking-section" class="bg-[#0B132B] hover:bg-[#F97316] transition text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">Request Estimate</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 3: Mechanical Repairs -->
+        <section class="flex flex-col lg:flex-row items-center gap-12 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+            <div class="w-full lg:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden shadow-inner">
+                <img src="Assets/Images/Engine overhaul.jpg" alt="Engine Overhaul Service" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div class="flex items-center space-x-3 text-[#22C55E]">
+                    <i class="fa-solid fa-screwdriver-wrench text-2xl"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Engine Repairs</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-[#0B132B] tracking-tight">Mechanical Repairs</h2>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    From minor computer diagnostics to complex engine overhauls and minor servicing, our experienced mechanics accurately solve hardware faults. We ensure affordable labor costs alongside high-quality genuine spare parts.
+                </p>
+                
+                <ul class="grid grid-cols-2 gap-3 text-xs text-gray-600 font-semibold">
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Brake Optimization</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Minor & Major Servicing</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Suspension Rebuilds</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Engine OBD2 Code Scans</li>
+                </ul>
+
+                <!-- FREE CAR WASH -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center space-x-3">
+                    <i class="fa-solid fa-soap text-[#3B82F6] text-lg"></i>
+                    <p class="text-xs text-blue-800 font-bold">Bonus: Includes a free engine-bay blast and premium foam car wash!</p>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between border-t border-gray-100">
+                    <span class="text-sm font-bold text-gray-400">Diagnosis from: <span class="text-[#0B132B] text-lg font-black">KSh 2,500</span></span>
+                    <a href="index.html#booking-section" class="bg-[#0B132B] hover:bg-[#F97316] transition text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">Schedule Repair</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 4: Wheel Alignment -->
+        <section class="flex flex-col lg:flex-row-reverse items-center gap-12 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+            <div class="w-full lg:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden shadow-inner">
+                <img src="Assets/Images/laser matchine.jpg" alt="Laser Wheel Alignment System" class="w-full h-100 object-cover">
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div class="flex items-center space-x-3 text-[#A855F7]">
+                    <i class="fa-solid fa-crosshairs text-2xl"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Wheel Alignment</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-[#0B132B] tracking-tight">Precision Wheel Alignment</h2>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Protect your tires from uneven rubber wear and prevent steering drift on local roads. Our computerized 3D laser systems adjust camber, caster, and toe alignment back to precise manufacturer specifications at unbeatable prices.
+                </p>
+                
+                <ul class="grid grid-cols-2 gap-3 text-xs text-gray-600 font-semibold">
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>3D Laser Diagnostics</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Tire Balancing Included</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Suspension Checkup</li>
+                    <li><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Steering Center Calibration</li>
+                </ul>
+
+                <!-- FREE CAR WASH -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center space-x-3">
+                    <i class="fa-solid fa-soap text-[#3B82F6] text-lg"></i>
+                    <p class="text-xs text-blue-800 font-bold">Bonus: Includes full undercarriage mud rinse and clean touch exterior wash!</p>
+                </div>
+
+                <div class="pt-2 flex items-center justify-between border-t border-gray-100">
+                    <span class="text-sm font-bold text-gray-400">Alignment from: <span class="text-[#0B132B] text-lg font-black">KSh 3,500</span></span>
+                    <a href="index.html#booking-section" class="bg-[#0B132B] hover:bg-[#F97316] transition text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">Book Alignment</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="global-site-footer bg-[#0B132B] text-white py-14 px-6 text-center">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <div class="flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-wrench text-xl text-[#F97316]"></i>
+                <span class="font-bold text-xl tracking-tight">Pro Auto Care</span>
+            </div>
+            <p class="text-xs text-gray-400 font-normal tracking-wide">Your Trusted Partner for All Automotive Services</p>
+            <div class="text-[11px] text-gray-500 pt-6 border-t border-gray-800/40">
+                &copy; 2026 Pro Auto Care. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
