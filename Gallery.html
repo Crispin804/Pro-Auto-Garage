@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio Gallery - Pro Auto Care</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#F8FAFC] text-gray-800 font-sans antialiased">
+
+    <!-- 1. GLOBAL NAVIGATION BAR -->
+    <nav class="global-navigation-bar bg-[#0B132B] text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html#hero-section" class="flex items-center space-x-3 hover:opacity-90 transition">
+                    <!-- LOGO FIXED: No rotation or spatial transformation applied -->
+                    <i class="fa-solid fa-wrench text-2xl text-[#F97316]"></i>
+                </a>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tight">Pro Auto Care</h1>
+                    <p class="text-xs text-gray-400 font-normal">Your Trusted Garage Partner</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="index.html#hero-section" class="text-gray-300 hover:text-[#F97316] transition">Home</a>
+                <a href="Services.html" class="text-gray-300 hover:text-[#F97316] transition">Services</a>
+                <a href="About.html" class="text-gray-300 hover:text-[#F97316] transition">About Us</a>
+                <a href="Gallery.html" class="text-[#F97316] font-bold transition">Gallery</a>
+                <a href="Contact.html" class="text-gray-300 hover:text-[#F97316] transition">Contact</a>
+            </div>
+
+            <div>
+                <a href="tel:+254713456789" class="bg-[#F97316] hover:bg-[#e2620d] transition text-white px-5 py-2.5 rounded-lg flex items-center space-x-2 font-bold text-sm tracking-wide">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>24/7 Emergency</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO PAGE HEADER -->
+    <header class="bg-[#0B132B] py-20 px-6 text-center text-white border-t border-slate-800">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight">Our Work Portfolio</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+                Visual proof of our technical precision. Explore genuine results delivered inside our premium diagnostic and restoration bays.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN GALLERY CONTENT CONTAINER -->
+    <main class="max-w-6xl mx-auto px-6 py-16 space-y-20">
+
+        <!-- 3. BRAND ACCENT FILTER BAR -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <button class="bg-[#0B132B] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl transition shadow-sm border border-[#0B132B]">
+                All Projects
+            </button>
+            <button class="bg-white hover:bg-[#3B82F6] text-gray-600 hover:text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl border border-gray-200 transition shadow-sm">
+                Bodyworks & Paint
+            </button>
+            <button class="bg-white hover:bg-[#F97316] text-gray-600 hover:text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl border border-gray-200 transition shadow-sm">
+                Mechanical Core
+            </button>
+            <button class="bg-white hover:bg-emerald-500 text-gray-600 hover:text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl border border-gray-200 transition shadow-sm">
+                Towing Recovery
+            </button>
+        </div>
+
+        <!-- 4. EXPANDED PORTFOLIO GRID WITH WORKING UNSPLASH IMAGES -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Item 1: Bodyworks Card -->
+            <div class="relative overflow-hidden rounded-3xl bg-slate-900 group shadow-md aspect-[4/3]">
+                <img src="Assets/Images/Landcruiser.jpg" alt="Premium Spray Work" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition duration-500">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 text-white space-y-1.5">
+                    <span class="bg-[#3B82F6] text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md self-start">Bodyworks</span>
+                    <h3 class="text-lg font-bold">2022 Toyota Land Cruiser</h3>
+                    <p class="text-gray-300 text-xs">Full multi-coat panel scratch spray alignment correction.</p>
+                </div>
+            </div>
+
+            <!-- Item 2: Mechanical Card -->
+            <div class="relative overflow-hidden rounded-3xl bg-slate-900 group shadow-md aspect-[4/3]">
+                <img src="Assets/Images/Subaru wrx.jpg" alt="Engine Overhaul" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition duration-500">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 text-white space-y-1.5">
+                    <span class="bg-[#F97316] text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md self-start">Mechanical Core</span>
+                    <h3 class="text-lg font-bold">Subaru Impreza WRX STI</h3>
+                    <p class="text-gray-300 text-xs">Engine block breakdown overhaul and turbo upgrade calibration.</p>
+                </div>
+            </div>
+
+            <!-- Item 3: Wheel Alignment Card -->
+            <div class="relative overflow-hidden rounded-3xl bg-slate-900 group shadow-md aspect-[4/3]">
+                <img src="Assets/Images/Mercedes-Benz C200 Wheel Alignment Service.jpg" alt="3D Laser Alignment" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition duration-500">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 text-white space-y-1.5">
+                    <span class="bg-purple-500 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md self-start">Calibration</span>
+                    <h3 class="text-lg font-bold">Mercedes-Benz C200</h3>
+                    <p class="text-gray-300 text-xs">Four-wheel 3D laser alignment and new steering toe tuning.</p>
+                </div>
+            </div>
+
+            <!-- Item 4: Towing Card -->
+            <div class="relative overflow-hidden rounded-3xl bg-slate-900 group shadow-md aspect-[4/3]">
+                <img src="Assets/Images/Ford Raptor.jpg" alt="Flatbed Fleet Deployment" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition duration-500">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 text-white space-y-1.5">
+                    <span class="bg-emerald-500 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md self-start">Towing Recovery</span>
+                    <h3 class="text-lg font-bold">Ford Ranger Wildtrak</h3>
+                    <p class="text-gray-300 text-xs">Zero-damage emergency highway recovery and delivery drop-off.</p>
+                </div>
+            </div>
+
+            <!-- Item 5: Detailing Card -->
+            <div class="relative overflow-hidden rounded-3xl bg-slate-900 group shadow-md aspect-[4/3]">
+                <img src="Assets/Images/BMW X5.jpg" alt="Post Service Wash Detailing" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition duration-500">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 text-white space-y-1.5">
+                    <span class="bg-amber-500 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md self-start">Bonus Care</span>
+                    <h3 class="text-lg font-bold">BMW X5 xDrive</h3>
+                    <p class="text-gray-300 text-xs">Complimentary premium foam car wash and paint sealant application.</p>
+                </div>
+            </div>
+
+            <!-- Item 6: Structural Diagnostics Card -->
+            <div class="relative overflow-hidden rounded-3xl bg-slate-900 group shadow-md aspect-[4/3]">
+                <img src="Assets/Images/AUDI .jpg" alt="Electrical Work" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-40 transition duration-500">
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 text-white space-y-1.5">
+                    <span class="bg-[#F97316] text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md self-start">Mechanical Core</span>
+                    <h3 class="text-lg font-bold">Audi A4 Avant</h3>
+                    <p class="text-gray-300 text-xs">Advanced OBD2 electrical harness mapping and sensor refitting.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 5. REAL TIME BEFORE & AFTER CRAFTSMANSHIP GRID -->
+        <section class="space-y-8 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
+            <div class="text-center md:text-left space-y-2">
+                <h2 class="text-2xl font-extrabold text-[#0B132B] tracking-tight">Accident Damage Restoration Proof</h2>
+                <p class="text-xs text-gray-400">See how our structural restoration booth reverts major collision defects smoothly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Panel 1: Severe Bent State -->
+                <div class="relative rounded-2xl overflow-hidden shadow-inner h-64 md:h-80 bg-slate-100">
+                    <img src="Assets/Images/accident  car.jpg" alt="Damaged Car Body panel before repair" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-md shadow-sm">
+                        Before (Arrived via Towing)
+                    </span>
+                </div>
+                <!-- Panel 2: Polished Showroom Finish -->
+                <div class="relative rounded-2xl overflow-hidden shadow-inner h-64 md:h-80 bg-slate-100">
+                    <img src="Assets/Images/Restoration Mercedes-AMG C63s W205.jpg" alt="Restored Car body panel after custom painting" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-md shadow-sm">
+                        After (Ready for Customer Checkout)
+                    </span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. GLOBAL SITE FOOTER -->
+    <footer class="global-site-footer bg-[#0B132B] text-white py-14 px-6 text-center">
+        <div class="max-w-4xl mx-auto space-y-3">
+            <div class="flex items-center justify-center space-x-2">
+                <!-- LOGO FIXED: No rotation or spatial transformation applied -->
+                <i class="fa-solid fa-wrench text-xl text-[#F97316]"></i>
+                <span class="font-bold text-xl tracking-tight">Pro Auto Care</span>
+            </div>
+            <p class="text-xs text-gray-400 font-normal tracking-wide">Your Trusted Partner for All Automotive Services</p>
+            <div class="text-[11px] text-gray-500 pt-6 border-t border-gray-800/40">
+                &copy; 2026 Pro Auto Care. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
