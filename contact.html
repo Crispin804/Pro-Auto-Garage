@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Pro Auto Care</title>
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-[#F8FAFC] text-gray-800 font-sans antialiased">
 
-    <!-- 1. GLOBAL NAVIGATION BAR -->
     <nav class="global-navigation-bar bg-[#0B132B] text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <a href="index.html#hero-section" class="flex items-center space-x-3 hover:opacity-90 transition">
-                    <i class="fa-solid fa-wrench text-2xl text-[#F97316] transform rotate-90"></i>
+                    <i class="fa-solid fa-wrench text-3xl text-[#F97316]"></i>
                 </a>
                 <div>
                     <h1 class="text-2xl font-bold tracking-tight">Pro Auto Care</h1>
@@ -42,7 +39,6 @@
         </div>
     </nav>
 
-    <!-- 2. HERO PAGE HEADER -->
     <header class="bg-[#0B132B] py-20 px-6 text-center text-white border-t border-slate-800">
         <div class="max-w-4xl mx-auto space-y-4">
             <h1 class="text-4xl md:text-5xl font-black tracking-tight">Get in Touch With Us</h1>
@@ -52,11 +48,9 @@
         </div>
     </header>
 
-    <!-- 3. MAIN CONTACT INTERACTION SPAN -->
     <main class="max-w-6xl mx-auto px-6 py-20 space-y-20">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <!-- Left Side: Channels and Map Data (5 Cols) -->
             <div class="lg:col-span-5 space-y-8">
                 <div>
                     <h2 class="text-2xl font-extrabold text-[#0B132B] tracking-tight mb-2">Our Channels</h2>
@@ -64,7 +58,6 @@
                 </div>
 
                 <div class="space-y-6">
-                    <!-- Location Node -->
                     <div class="flex items-start space-x-4">
                         <div class="bg-[#F97316] text-white p-3 rounded-2xl shadow-sm">
                             <i class="fa-solid fa-location-dot w-5 h-5 text-center leading-5"></i>
@@ -75,7 +68,6 @@
                         </div>
                     </div>
 
-                    <!-- Hotline Node -->
                     <div class="flex items-start space-x-4">
                         <div class="bg-[#F97316] text-white p-3 rounded-2xl shadow-sm">
                             <i class="fa-solid fa-phone w-5 h-5 text-center leading-5"></i>
@@ -89,7 +81,6 @@
                         </div>
                     </div>
 
-                    <!-- Email Node -->
                     <div class="flex items-start space-x-4">
                         <div class="bg-[#F97316] text-white p-3 rounded-2xl shadow-sm">
                             <i class="fa-solid fa-envelope w-5 h-5 text-center leading-5"></i>
@@ -102,7 +93,6 @@
                         </div>
                     </div>
 
-                    <!-- Business Hours Node -->
                     <div class="flex items-start space-x-4">
                         <div class="bg-[#F97316] text-white p-3 rounded-2xl shadow-sm">
                             <i class="fa-solid fa-clock w-5 h-5 text-center leading-5"></i>
@@ -119,33 +109,32 @@
                 </div>
             </div>
 
-            <!-- Right Side: Direct Inquiry Processing Form (7 Cols) -->
             <div class="lg:col-span-7 bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-sm">
                 <h3 class="text-xl font-bold text-[#0B132B] mb-2">Send an Inquiry</h3>
                 <p class="text-xs text-gray-400 mb-6">Fill out the fields below and our operations manager will contact you within 1 business hour.</p>
 
-                <form class="space-y-5">
+                <form id="messageForm" onsubmit="captureMessage(event)" class="space-y-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-[#0B132B] mb-1.5">Your Name</label>
-                            <input type="text" placeholder="John Doe" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
+                            <input type="text" id="msgName" required placeholder="John Doe" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-[#0B132B] mb-1.5">Phone Number</label>
-                            <input type="tel" placeholder="+254 713 456 789" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
+                            <input type="tel" id="msgPhone" required placeholder="+254 713 456 789" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
                         </div>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#0B132B] mb-1.5">Email Address</label>
-                        <input type="email" placeholder="john@example.com" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
+                        <input type="email" id="msgEmail" required placeholder="john@example.com" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#0B132B] mb-1.5">Subject Matter</label>
-                        <input type="text" placeholder="Corporate Fleet / Insurance Valuation / General Consultation" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
+                        <input type="text" id="msgSubject" required placeholder="Corporate Fleet / Insurance Valuation / General Consultation" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-[#0B132B] mb-1.5">Detailed Message</label>
-                        <textarea rows="4" placeholder="How can our professional garage technicians assist you today?..." class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs"></textarea>
+                        <textarea id="msgBody" rows="4" required placeholder="How can our professional garage technicians assist you today?..." class="w-full border border-gray-200 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] bg-white text-xs"></textarea>
                     </div>
                     <button type="submit" class="w-full bg-[#F97316] hover:bg-[#e2620d] text-white font-bold py-3 rounded-xl text-xs transition tracking-wider uppercase shadow-sm">
                         Send Message
@@ -154,13 +143,12 @@
             </div>
         </div>
 
-        <!-- 4. GOOGLE MAPS IFRAME INTEGRATION EMBED BLOCK -->
         <section class="space-y-4">
             <div class="text-center md:text-left">
                 <h3 class="text-xl font-bold text-[#0B132B]">Find Our Workshop Facility</h3>
                 <p class="text-xs text-gray-400 mt-1">Get precise navigation turn-by-turn route tracking straight to our drop-off bays.</p>
             </div>
-            <!-- Interactive Iframe Box Wrapper Layout -->
+            
             <div class="w-full h-96 rounded-3xl overflow-hidden shadow-sm border border-gray-200 bg-gray-100">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.228414435648!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b2dfec!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1710000000000!5m2!1sen!2ske" 
@@ -168,11 +156,10 @@
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                </table>
             </div>
         </section>
 
-        <!-- 5. INSURANCE DROPOFF DISPATCH ACCREDITATION SUB-PANEL -->
         <section class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
             <div class="text-center max-w-xl mx-auto space-y-2">
                 <h3 class="text-lg font-bold text-[#0B132B]">Direct Accident Claims Processing</h3>
@@ -190,19 +177,77 @@
 
     </main>
 
-    <!-- 6. GLOBAL SITE FOOTER -->
-    <footer class="global-site-footer bg-[#0B132B] text-white py-14 px-6 text-center">
-        <div class="max-w-4xl mx-auto space-y-3">
-            <div class="flex items-center justify-center space-x-2">
-                <i class="fa-solid fa-wrench text-xl text-[#F97316]"></i>
-                <span class="font-bold text-xl tracking-tight">Pro Auto Care</span>
+    <footer class="bg-gradient-to-br from-[#0B132B] via-[#111C3A] to-[#0B132B] text-gray-300 py-16 px-6 md:px-12 border-t border-slate-800/60 font-sans antialiased">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
+            
+            <div class="space-y-6">
+                <div class="flex items-center space-x-2.5">
+                    <i class="fa-solid fa-wrench text-xl text-[#F97316]"></i>
+                    <span class="text-white font-extrabold text-xl tracking-tight">Pro Auto Care</span>
+                </div>
+                <p class="text-sm text-gray-400 font-normal leading-relaxed max-w-sm">
+                    Your trusted partner for all automotive services — from emergency towing to precision bodywork.
+                </p>
+                <div>
+                    <a href="tel:+254713456789" class="inline-flex items-center space-x-2 bg-[#F97316] hover:bg-[#e2620d] text-white font-bold text-sm px-6 py-3 rounded-xl transition shadow-md shadow-orange-900/20 tracking-wide">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>Call 24/7</span>
+                    </a>
+                </div>
             </div>
-            <p class="text-xs text-gray-400 font-normal tracking-wide">Your Trusted Partner for All Automotive Services</p>
-            <div class="text-[11px] text-gray-500 pt-6 border-t border-gray-800/40">
-                &copy; 2026 Pro Auto Care. All rights reserved.
+
+            <div class="grid grid-cols-2 gap-6 md:gap-4">
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-white/90">Quick Links</h4>
+                    <ul class="space-y-2.5 text-xs font-medium text-gray-400">
+                        <li><a href="index.html" class="hover:text-[#F97316] transition">Home</a></li>
+                        <li><a href="Gallery.html" class="hover:text-[#F97316] transition">Before & After Gallery</a></li>
+                        <li><a href="index.html#reviews" class="hover:text-[#F97316] transition">Customer Reviews</a></li>
+                        <li><a href="Contact.html" class="hover:text-[#F97316] transition">Book a Service</a></li>
+                        <li><a href="Contact.html#map" class="hover:text-[#F97316] transition">Visit Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black uppercase tracking-widest text-white/90">Our Services</h4>
+                    <ul class="space-y-2.5 text-xs font-medium text-gray-400">
+                        <li><a href="services.html" class="hover:text-[#F97316] transition">Emergency Towing</a></li>
+                        <li><a href="services.html" class="hover:text-[#F97316] transition">Bodyworks & Painting</a></li>
+                        <li><a href="services.html" class="hover:text-[#F97316] transition">Mechanical Repairs</a></li>
+                        <li><a href="services.html" class="hover:text-[#F97316] transition">Wheel Alignment</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-black uppercase tracking-widest text-white/90">Contact</h4>
+                <ul class="space-y-3.5 text-xs font-medium text-gray-400">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-[#F97316] mt-0.5 text-sm w-4 text-center"></i>
+                        <span>123 Auto Care Street, Industrial Area, Nairobi, Kenya</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-[#F97316] text-sm w-4 text-center"></i>
+                        <a href="tel:+254713456789" class="hover:text-[#F97316] transition">+254 713 456 789</a>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope text-[#F97316] text-sm w-4 text-center"></i>
+                        <a href="mailto:info@proautocare.co.ke" class="hover:text-[#F97316] transition">info@proautocare.co.ke</a>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-clock text-[#F97316] text-sm w-4 text-center"></i>
+                        <span>Mon-Fri: 8 AM - 6 PM</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-800/40 text-center text-[11px] text-gray-500 tracking-wide">
+            © 2026 Pro Auto Care. All rights reserved.
         </div>
     </footer>
 
+    <script src="message.js"></script>
 </body>
 </html>
