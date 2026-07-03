@@ -1,0 +1,150 @@
+{
+  "booking": [
+    {
+      "id": "1719750000001",
+      "customer": "John Doe",
+      "car": "Toyota Vanguard",
+      "serviceType": "Mechanical Repairs",
+      "status": "In Service",
+      "date": "06/30/2026",
+      "cost": 5600
+    },
+    {
+      "id": "1719750000002",
+      "customer": "Jane Mwangi",
+      "car": "Subaru Outback",
+      "serviceType": "Wheel Alignment",
+      "status": "In Service",
+      "date": "07/01/2026",
+      "cost": 3500
+    },
+    {
+      "id": "1719750000003",
+      "customer": "David Otieno",
+      "car": "Mercedes-Benz C200",
+      "serviceType": "Bodyworks & Painting",
+      "status": "In Service",
+      "date": "07/01/2026",
+      "cost": 18000
+    },
+    {
+      "id": "1719750000004",
+      "customer": "Amara Okafor",
+      "car": "Range Rover Sport",
+      "serviceType": "Emergency Towing",
+      "status": "In Service",
+      "date": "07/01/2026",
+      "cost": 3000
+    },
+    {
+      "id": "1719750000005",
+      "customer": "Carlos Santana",
+      "car": "Nissan X-Trail",
+      "serviceType": "Mechanical Repairs",
+      "status": "Pending",
+      "date": "07/01/2026",
+      "cost": 6000
+    },
+    {
+      "id": "1719750000006",
+      "customer": "Sarah Jenkins",
+      "car": "Volkswagen Golf GTI",
+      "serviceType": "Wheel Alignment",
+      "status": "Completed",
+      "date": "06/28/2026",
+      "cost": 3500
+    },
+    {
+      "id": "1719750000007",
+      "customer": "Michael Chang",
+      "car": "Honda CR-V",
+      "serviceType": "Bodyworks & Painting",
+      "status": "Completed",
+      "date": "06/29/2026",
+      "cost": 9000
+    },
+    {
+      "id": "1719750000008",
+      "customer": "Fatima Bello",
+      "car": "Toyota Prado",
+      "serviceType": "Mechanical Repairs",
+      "status": "Pending",
+      "date": "07/02/2026",
+      "cost": 5400
+    },
+    {
+      "id": "1719750000009",
+      "customer": "Kevin Alvares",
+      "car": "Ford Ranger",
+      "serviceType": "Emergency Towing",
+      "status": "Completed",
+      "date": "06/25/2026",
+      "cost": 3000
+    },
+    {
+      "id": "1719750000010",
+      "customer": "Elena Rostova",
+      "car": "Audi A4",
+      "serviceType": "Wheel Alignment",
+      "status": "In Service",
+      "date": "06/30/2026",
+      "cost": 3500
+    },
+    {
+      "id": "1719750000011",
+      "customer": "Marcus Vance",
+      "car": "BMW 330i",
+      "serviceType": "Mechanical Repairs",
+      "status": "Pending",
+      "date": "07/01/2026",
+      "cost": 6500
+    },
+    {
+      "id": "1719750000012",
+      "customer": "Priya Patel",
+      "car": "Suzuki Grand Vitara",
+      "serviceType": "Bodyworks & Painting",
+      "status": "Pending",
+      "date": "07/03/2026",
+      "cost": 4500
+    },
+    {
+      "id": "1719750000013",
+      "customer": "Liam Anderson",
+      "car": "Mazda CX-5",
+      "serviceType": "Wheel Alignment",
+      "status": "Completed",
+      "date": "06/29/2026",
+      "cost": 3500
+    },
+    {
+      "id": "1719750000014",
+      "customer": "Chloe Dubois",
+      "car": "Peugeot 3008",
+      "serviceType": "Mechanical Repairs",
+      "status": "Completed",
+      "date": "07/01/2026",
+      "cost": 9000
+    },
+    {
+      "id": "1719750000015",
+      "customer": "Ahmed Ali",
+      "car": "Mitsubishi Pajero",
+      "serviceType": "Emergency Towing",
+      "status": "Completed",
+      "date": "07/01/2026",
+      "cost": 2500
+    },
+    {
+      "id": "LHjcgUWJe2U",
+      "customer": "Troiz Nine",
+      "car": "Toyota HILUX (KDY 556G)",
+      "serviceType": "Emergency Towing",
+      "status": "Pending",
+      "date": "07/03/2026",
+      "cost": 2500
+    }
+  ],
+  "users": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
