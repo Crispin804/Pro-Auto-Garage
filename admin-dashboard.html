@@ -11,16 +11,16 @@
 
     <header class="bg-[#0B132B] text-white px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-800 shadow-xl sticky top-0 z-50">
         <div class="flex items-center space-x-3 self-start md:self-auto">
-            <div class=" text-[#F97316] p-3 rounded-2xl flex items-center justify-center">
-                <i class="fa-solid fa-wrench text-3xl "></i>
+             <div class="flex items-center space-x-3">
+                 <a href="#hero-section" class="flex items-center space-x-3 hover:opacity-90 transition" title="Go to Home">
+                     <i   class="fa-solid fa-wrench text-3xl w-8 h-8 text-[#F97316]"></i>
+                 </a>
+                 <div>
+                    <h1 class="text-2xl font-bold tracking-tight">Pro Auto Care</h1>
+                     <p class="text-xs text-gray-400 font-normal">Your Trusted Garage Partner</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-xl font-black tracking-tight flex items-center gap-2">
-                    Pro Auto Care 
-                    <span class="bg-slate-800 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded-md border border-slate-700 uppercase tracking-widest hidden sm:inline-block">Live Server API Backend Connected</span>
-                </h1>
-                <p class="text-xs text-slate-400 font-medium">Workshop Operations Command Center</p>
-            </div>
+                
         </div>
 
         <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-6 text-sm font-medium">
@@ -70,26 +70,19 @@
             </div>
 
             <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex items-center space-x-5">
-                <div class="p-4 bg-emerald-50 text-emerald-500 rounded-2xl text-2xl"><i class="fa-credit-card "></i></div>
+                <div class="p-4 bg-emerald-50 text-emerald-500 rounded-2xl text-2xl"><i class="fa-solid fa-credit-card"></i></div>
                 <div>
                     <span class="text-slate-400 font-bold text-[10px] uppercase tracking-wider block">Gross Revenue</span>
-                    <span id="total-revenue" class="text-3xl font-black text-[#0B132B] tracking-tight">$0.00</span>
+                    <span id="total-revenue" class="text-3xl font-black text-[#0B132B] tracking-tight">Ksh 0</span>
                 </div>
             </div>
-            <button>
-                <div class="bg-white rounded-3xl p-6 shadow-sm border mt-8">
-                    <h3 class="text-xl font-bold text-[#0B132B] mb-4"><i class="fa-regular fa-envelope mr-2 text-blue-500"></i> Customer Messages</h3>
-                    <div id="message-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-                </div>
-            </button>
-            
         </section>
 
         <section class="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 space-y-6">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                 <div>
                     <h3 class="text-lg font-black text-[#0B132B]">Active Workshop Worksheets</h3>
-                    <p class="text-xs text-slate-400 mt-0.5">Click actions to advance workshop vehicles through service bays instantly inside db.json</p>
+                    <p class="text-xs text-slate-400 mt-0.5">Advance workshop vehicles through service workflow loops or cancel operations inside db.json</p>
                 </div>
                 
                 <div class="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
@@ -98,7 +91,7 @@
                         <input 
                             type="text" 
                             id="tableSearch" 
-                            placeholder="Search client, plate reference or model..." 
+                            placeholder="Search client or model..." 
                             oninput="filterTableLog()"
                             class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-4 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-[#F97316] font-medium transition"
                         >
