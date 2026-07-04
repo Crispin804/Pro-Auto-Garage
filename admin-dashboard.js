@@ -2,8 +2,8 @@ const API_URL = "http://localhost:3000/booking";
 
 async function syncDashboard() {
     try {
-        const bookingResponse = await fetch(API_URL);
-        const bookings = await bookingResponse.json();
+        const response = await fetch(API_URL);
+        const bookings = await response.json();
         
         const today = new Date();
         const todayStr = `${String(today.getMonth() + 1).padStart(2, '0')}/${String(today.getDate()).padStart(2, '0')}/${today.getFullYear()}`;
@@ -22,9 +22,8 @@ async function syncDashboard() {
         document.getElementById('total-revenue').textContent = `Ksh ${dynamicRevenue.toLocaleString()}`;
 
         renderTableRows(bookings);
-        await loadDashboardMessages();
     } catch (error) {
-        console.error(error);
+        console.error("Critical error while synchronizing engine with db.json stream:", error);
     }
 }
 
@@ -36,20 +35,34 @@ function renderTableRows(dataArray) {
     
     [...dataArray].reverse().forEach(b => {
         let statusClasses = "bg-orange-50 text-orange-600";
-        if(b.status === "In Service") statusClasses = "bg-blue-50 text-blue-600";
-        if(b.status === "Completed") statusClasses = "bg-emerald-50 text-emerald-600";
+        if (b.status === "In Service") statusClasses = "bg-blue-50 text-blue-600";
+        if (b.status === "Completed") statusClasses = "bg-emerald-50 text-emerald-600";
+        if (b.status === "Cancelled") statusClasses = "bg-red-50 text-red-600";
 
         let actionButtonHtml = "";
+
         if (b.status === "Pending") {
             actionButtonHtml = `
-                <button onclick="updateStatus('${b.id}', 'In Service')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm transition">
-                    <i class="fa-solid fa-gears mr-1"></i> Start Service
-                </button>`;
+                <div class="flex items-center justify-end space-x-2">
+                    <button onclick="updateStatus('${b.id}', 'In Service')" class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm transition">
+                        <i class="fa-solid fa-gears mr-1"></i> Start Service
+                    </button>
+                    <button onclick="cancelBooking('${b.id}')" class="bg-red-500 hover:bg-red-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm transition">
+                        <i class="fa-solid fa-trash mr-1"></i> Cancel
+                    </button>
+                </div>`;
         } else if (b.status === "In Service") {
             actionButtonHtml = `
-                <button onclick="updateStatus('${b.id}', 'Completed')" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm transition">
-                    <i class="fa-solid fa-circle-check mr-1"></i> Close & Pay
-                </button>`;
+                <div class="flex items-center justify-end space-x-2">
+                    <button onclick="updateStatus('${b.id}', 'Completed')" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm transition">
+                        <i class="fa-solid fa-circle-check mr-1"></i> Close & Pay
+                    </button>
+                    <button onclick="cancelBooking('${b.id}')" class="bg-red-500 hover:bg-red-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm transition">
+                        <i class="fa-solid fa-trash mr-1"></i> Cancel
+                    </button>
+                </div>`;
+        } else if (b.status === "Cancelled") {
+            actionButtonHtml = `<span class="text-red-400 font-bold italic text-[11px]"><i class="fa-solid fa-ban mr-1"></i> Cancelled Logs</span>`;
         } else {
             actionButtonHtml = `<span class="text-slate-400 font-bold italic text-[11px]"><i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i> Archived</span>`;
         }
@@ -78,36 +91,6 @@ function renderTableRows(dataArray) {
     });
 }
 
-async function loadDashboardMessages() {
-    try {
-        const response = await fetch(MSG_API_URL);
-        const messages = await response.json();
-        
-        const container = document.getElementById('message-cards-container');
-        if (!container) return;
-        
-        container.innerHTML = '';
-        
-        [...messages].reverse().forEach(msg => {
-            container.innerHTML += `
-                <div class="border border-slate-100 rounded-2xl p-4 bg-slate-50/50 hover:shadow-md transition relative">
-                    <div class="flex justify-between items-start mb-2">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">${msg.name}</h4>
-                            <p class="text-xs text-slate-400">${msg.email}</p>
-                        </div>
-                        <span class="text-[10px] bg-slate-200 text-slate-600 font-bold px-2 py-0.5 rounded-md">${msg.date}</span>
-                    </div>
-                    <div class="text-xs font-semibold text-blue-600 mb-1">Sub: ${msg.subject}</div>
-                    <p class="text-xs text-slate-600 bg-white p-2.5 rounded-xl border border-slate-100 italic leading-relaxed">"${msg.message}"</p>
-                </div>
-            `;
-        });
-    } catch (error) {
-        console.error("Error loading customer contact logs:", error);
-    }
-}
-
 async function updateStatus(id, newStatus) {
     try {
         const response = await fetch(`${API_URL}/${id}`, {
@@ -120,7 +103,23 @@ async function updateStatus(id, newStatus) {
             syncDashboard();
         }
     } catch (error) {
-        console.error(error);
+        console.error("Failed to execute PATCH operations update loop:", error);
+    }
+}
+
+async function cancelBooking(id) {
+    if (!confirm("Are you sure you want to cancel this vehicle service request? This operation will remove the sheet record completely from db.json.")) return;
+
+    try {
+        const response = await fetch(`${API_URL}/${id}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) {
+            syncDashboard();
+        }
+    } catch (error) {
+        console.error("Destructive cancel query dropped across transmission pipeline:", error);
     }
 }
 
