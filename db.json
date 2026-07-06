@@ -86,7 +86,7 @@
       "customer": "Elena Rostova",
       "car": "Audi A4",
       "serviceType": "Wheel Alignment",
-      "status": "In Service",
+      "status": "Completed",
       "date": "06/30/2026",
       "cost": 3500
     },
@@ -104,7 +104,7 @@
       "customer": "Priya Patel",
       "car": "Suzuki Grand Vitara",
       "serviceType": "Bodyworks & Painting",
-      "status": "Pending",
+      "status": "Completed",
       "date": "07/03/2026",
       "cost": 4500
     },
@@ -140,7 +140,7 @@
       "customer": "Troiz Nine",
       "car": "Toyota HILUX (KDY 556G)",
       "serviceType": "Emergency Towing",
-      "status": "Pending",
+      "status": "Completed",
       "date": "07/03/2026",
       "cost": 2500
     },
